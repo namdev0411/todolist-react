@@ -1,0 +1,58 @@
+.view{
+    height: 64vh;
+    width: 64vw;
+
+    position: absolute;
+    top: 9vw;
+    left: 20vw;
+
+    border: 3px solid slateblue;
+    background-color: #fff;
+    border-radius: 20px;
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transform: rotate(90deg) translateY(-1000px);
+    transition: .35s ease-in-out;
+
+    .container{
+        width: 90%;
+        height: 90%;
+        text-align: left;
+        .closeButton{
+            position: absolute;
+            top: 5px;
+            right: 8px;
+        }
+        div{
+            display: flex;
+            justify-content: space-between;
+            font-size: 25px;
+            color: slateblue;
+
+            .view-content{
+                color: #111;
+                display: inline;
+                font-size: 18px;
+            }
+        }
+        .name{
+            height: 25%;
+        }
+        .date{
+            height: 25%;
+        }
+        .button{
+            display: flex;
+            justify-content: center;
+
+            margin-top: 20px;
+        }
+    }
+    &.active{
+        transform: rotate(0) translateY(0);
+    }
+}

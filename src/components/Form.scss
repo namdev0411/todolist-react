@@ -1,0 +1,38 @@
+.form{
+    height: 60vh;
+    width: 60vw;
+
+    position: absolute;
+    top: 20vh;
+    left: 20vw;
+
+    background-color: white;
+    z-index: 2;
+
+    transform: scale(0%);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: .35s ease-in-out;
+
+    .container{
+        text-align: left;
+        padding: 10px;
+        border: 3px solid slateblue;
+        border-radius: 1.5rem;
+
+        .form-field{
+            margin: 10px;
+        }
+        .form-button{
+            text-align: center;
+            margin-top: 10px;
+        }
+    }
+    &.active{
+        transform: scale(100%);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+    }
+}
